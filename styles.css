@@ -1,0 +1,296 @@
+/* General styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #1C1C1C; /* Dark background */
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    font-family: 'Jomolhari', serif;
+    color: #b22222;
+    margin-bottom: 10px;
+}
+
+p {
+    font-family: 'Jomolhari', serif;
+}
+
+/* Welcome Page Styles */
+.welcome-body {
+    background: url('img/bulul.png') no-repeat center center fixed, #1C1C1C; /* Image overlaid on a dark background */
+    background-size: 300px; /* Adjust as needed */
+    box-shadow: none; /* Remove the box-shadow */
+}
+
+.welcome-container {
+    margin-top: 350px;
+    text-align: center;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.welcome-container h1 {
+    color: #FFFFFF;
+    font-size: x-large;
+    font-weight: lighter;
+}
+
+.btn-get-started {
+    background-color: #b22222;
+    color: #FFFFFF;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.btn-get-started:hover {
+    background-color: #a02020;
+}
+
+/* Login Page Styles */
+.login-body {
+    background: url('img/bulul-low-op.png') no-repeat center center fixed;
+    background-color: #1C1C1C;
+    background-size: 300px; /* Adjust as needed */
+    box-shadow: none; /* Remove the box-shadow */
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: auto;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+.login-container h1 {
+    color: #FFFFFF;
+}
+
+/*Access as Guest Styles*/
+.access-container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+}
+
+.checkbox-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.input-container {
+    margin-bottom: 10px;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #b22222;
+    border-radius: 5px;
+    background-color: rgba(28, 28, 28, 0.8);
+    color: #FFFFFF;
+    outline: none;
+    font-size: 16px;
+}
+
+.hidden {
+    display: none;
+}
+    
+h1, .header1 {
+    font-family: 'Jomolhari', serif;
+    color: #b22222;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.input-container input {
+    padding-left: 30px; /* Space for the icon */
+    padding-right: 12px; /* Adjust as necessary */
+    padding-top: 10px; /* Adjust vertical padding to center text */
+    padding-bottom: 10px; /* Adjust vertical padding to center text */
+    width: 100%; /* Ensures the input field spans the container */
+    border: 1px solid #b22222;
+    border-radius: 5px;
+    text-indent: 30px; /* Creates a tabbed effect for the input text */
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #B22222;
+    outline: none;
+    font-size: 16px;
+}
+
+.input-container .toggle-password {
+    position: relative;
+    right: 10px;
+    left: 100px;
+    transform: translateY(-260%);
+    cursor: pointer;
+    color: #b22222;
+}   
+
+.input-container i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-30%);
+    color: #b22222; /* Adjust icon color as needed */
+}
+
+.input-container .icon-left {
+    left: 10px;
+    top: 40px;
+}
+
+
+input[type="text"],
+input[type="password"] {
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 3px solid #b22222;
+    border-radius: 10px;
+    outline: none;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+button {
+    background-color: #b22222;
+    color: #FFFFFF;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: 55px; /* Adjusted margin */
+}
+
+button:hover {
+    background-color: #8B0000;
+}
+
+.access-body {
+    font-family: 'Inter', sans-serif;
+    background: url('img/bulul-low-op.png') no-repeat center center fixed, #1C1C1C; /* Image overlaid on a dark background */
+    background-size: 300px; /* Adjust as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative; /* Ensure relative positioning for absolute logo */
+    color: #FFFFFF;
+}
+
+
+.access-buttons {
+    display: flex;
+    flex-direction: column; /* Ensure buttons stack vertically */
+    align-items: center; /* Center align items horizontally */
+}
+
+.btn-access-guest{
+    background-color:#FFFFFF;
+    color: #b22222;
+    border: 1.25px solid #b22222;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn-access-admin {
+    background-color: #b22222;
+    color: #FFFFFF;
+    border: 1.25px solid #b22222;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn-access-guest:hover{
+    background-color: #8B0000; /* Darkened primary color */
+}
+
+.btn-access-admin:hover {
+    background-color: #FFFFFF; /* Darkened primary color */
+}
+
+.back-button-container {
+    position: absolute;
+    top: 50px;
+    left: 20px;
+}
+
+.logo-container {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+}
+
+.logo {
+    max-width: 180px;
+    height: auto;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    .login-container {
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .login-container {
+        padding: 15px;
+    }
+}
