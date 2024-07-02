@@ -255,13 +255,13 @@ button:hover {
 }
 
 .btn-access-guest:hover{
-    background-color: #FFFFFF; /* Darkened primary color */
-    color: #B22222;
+    background-color: #B22222; /* Darkened primary color */
+    color: #FFFFFF;
 }
 
 .btn-access-admin:hover {
-    background-color: #8B0000; /* Darkened primary color */
-    color: #FFFFFF;
+    background-color: #FFFFFF; /* Darkened primary color */
+    color: #8B0000;
 }
 
 .back-button-container {
