@@ -161,7 +161,7 @@ form {
 .input-container .toggle-password {
     position: absolute;
     right: 100px;
-    left: 180px;
+    left: 220px;
     transform: translateY(-15%);
     cursor: pointer;
     color: #b22222;
