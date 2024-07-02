@@ -257,11 +257,13 @@ button:hover {
 .btn-access-guest:hover{
     background-color: #B22222; /* Darkened primary color */
     color: #FFFFFF;
+    border: 1.25px solid #FFFFFF;
 }
 
 .btn-access-admin:hover {
     background-color: #FFFFFF; /* Darkened primary color */
     color: #8B0000;
+    border: 1.25px solid #b22222;
 }
 
 .back-button-container {
