@@ -161,7 +161,7 @@ form {
     position: relative;
     right: 10px;
     left: 100px;
-    transform: translateY(-260%);
+    transform: translateY(-250%);
     cursor: pointer;
     color: #b22222;
 }   
