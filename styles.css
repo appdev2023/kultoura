@@ -159,13 +159,13 @@ form {
 }
 
 .input-container .toggle-password {
-    position: relative;
-    right: 10px;
-    left: 100px;
-    transform: translateY(-250%);
+    position: absolute;
+    right: 100px;
+    left: 180px;
+    transform: translateY(-15%);
     cursor: pointer;
     color: #b22222;
-}   
+}  
 
 .input-container i {
     position: absolute;
