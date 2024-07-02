@@ -37,7 +37,7 @@ p {
     text-align: center;
     padding: 50px;
     border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: none;
 }
 
 .welcome-container h1 {
@@ -78,7 +78,7 @@ p {
     padding: 20px;
     margin: auto;
     border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: none;
     max-width: 400px;
     width: 100%;
     text-align: center;
@@ -93,9 +93,10 @@ p {
     text-align: center;
     padding: 20px;
     border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: none;
     max-width: 400px;
     width: 100%;
+    box-shadow: none;
 }
 
 .checkbox-container {
