@@ -220,7 +220,6 @@ button:hover {
     color: #FFFFFF;
 }
 
-
 .access-buttons {
     display: flex;
     flex-direction: column; /* Ensure buttons stack vertically */
@@ -256,11 +255,11 @@ button:hover {
 }
 
 .btn-access-guest:hover{
-    background-color: #8B0000; /* Darkened primary color */
+    background-color: #FFFFFF; /* Darkened primary color */
 }
 
 .btn-access-admin:hover {
-    background-color: #FFFFFF; /* Darkened primary color */
+    background-color: #8B0000; /* Darkened primary color */
 }
 
 .back-button-container {
