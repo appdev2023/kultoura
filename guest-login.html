@@ -62,25 +62,11 @@
                         <input type="text" class="input-field" placeholder="Enter School">
                     </div>
                 </div>
-                <button type="submit" class="btn-access">Submit</button>
+                <button type="submit" class="btn-access" id="btn-submit" style="display: none;">Submit</button>
             </form>
         </div>
     </div>
     <!-- Include your external JavaScript file -->
     <script src="scripts.js"></script>
-    <script>
-        function toggleForm(type) {
-            var studentForm = document.getElementById("student-form");
-            var visitorForm = document.getElementById("visitor-form");
-
-            if (type === 'student') {
-                studentForm.classList.remove("hidden");
-                visitorForm.classList.add("hidden");
-            } else if (type === 'visitor') {
-                visitorForm.classList.remove("hidden");
-                studentForm.classList.add("hidden");
-            }
-        }
-    </script>
 </body>
 </html>
