@@ -12,21 +12,5 @@ document.addEventListener('DOMContentLoaded', function () {
             this.classList.add('fa-eye');
         }
     });
-
-    function toggleForm(type) {
-        var studentForm = document.getElementById("student-form");
-        var visitorForm = document.getElementById("visitor-form");
-        var submitButton = document.getElementById("btn-submit");
-
-        if (type === 'student') {
-            studentForm.classList.remove("hidden");
-            visitorForm.classList.add("hidden");
-            submitButton.style.display = 'block';
-        } else if (type === 'visitor') {
-            visitorForm.classList.remove("hidden");
-            studentForm.classList.add("hidden");
-            submitButton.style.display = 'block';
-        }
-    }
     
 });
