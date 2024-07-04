@@ -33,7 +33,7 @@ p {
 }
 
 .welcome-container {
-    margin-top: 350px;
+    margin-top: 250px;
     text-align: center;
     padding: 50px;
     border-radius: 20px;
@@ -44,23 +44,6 @@ p {
     color: #FFFFFF;
     font-size: x-large;
     font-weight: lighter;
-}
-
-.btn-get-started {
-    background-color: #b22222;
-    color: #FFFFFF;
-    border: none;
-    padding: 12px 20px;
-    cursor: pointer;
-    border-radius: 20px;
-    font-size: 16px;
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 20px;
-}
-
-.btn-get-started:hover {
-    background-color: #a02020;
 }
 
 /* Login Page Styles */
@@ -91,7 +74,7 @@ p {
 /*Access as Guest Styles*/
 .access-container {
     text-align: center;
-    padding: 20px;
+    padding: 10px;
     border-radius: 20px;
     box-shadow: none;
     max-width: 400px;
@@ -102,7 +85,7 @@ p {
 .checkbox-container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-start;    
     margin-bottom: 20px;
 }
 
@@ -125,7 +108,7 @@ p {
 .hidden {
     display: none;
 }
-    
+
 h1, .header1 {
     font-family: 'Jomolhari', serif;
     color: #b22222;
@@ -180,7 +163,6 @@ form {
     top: 40px;
 }
 
-
 input[type="text"],
 input[type="password"] {
     padding: 12px;
@@ -209,6 +191,48 @@ button:hover {
     background-color: #8B0000;
 }
 
+/* Red button styles */
+.btn-red {
+    background-color: #b22222;
+    color: #FFFFFF;
+    border: 1.25px solid #b22222;
+    padding: 12px 50px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn-red:hover {
+    background-color: #FFFFFF; /* Darkened primary color */
+    color: #8B0000;
+    border: 1.25px solid #b22222;
+}
+
+/* White button styles */
+.btn-white {
+    background-color:#FFFFFF;
+    color: #b22222;
+    border: 1.25px solid #b22222;
+    padding: 12px 50px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn-white:hover {
+    background-color: #B22222; /* Darkened primary color */
+    color: #FFFFFF;
+    border: 1.25px solid #FFFFFF;
+}
+
 .access-body {
     font-family: 'Inter', sans-serif;
     background: url('img/bulul-low-op.png') no-repeat center center fixed, #1C1C1C; /* Image overlaid on a dark background */
@@ -227,44 +251,45 @@ button:hover {
     align-items: center; /* Center align items horizontally */
 }
 
-.btn-access-guest{
-    background-color:#FFFFFF;
-    color: #b22222;
-    border: 1.25px solid #b22222;
-    padding: 12px 20px;
+.custom-radio {
+    display: flex;
+    align-items: center;
     cursor: pointer;
-    border-radius: 20px;
-    font-size: 16px;
-    text-decoration: none;
-    display: inline-block;
-    margin: 5px;
-    transition: background-color 0.3s ease-in-out;
+    position: relative;
+    margin-bottom: 10px;
 }
 
-.btn-access-admin {
+.custom-radio input[type="radio"] {
+    display: none; /* Hide the actual radio button */
+}
+
+.custom-radio input[type="radio"] + .custom-radio-span {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #b22222;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    margin-right: 10px;
+}
+
+.custom-radio input[type="radio"]:checked + .custom-radio-span::before {
+    content: '';
+    width: 10px;
+    height: 10px;
     background-color: #b22222;
-    color: #FFFFFF;
-    border: 1.25px solid #b22222;
-    padding: 12px 20px;
-    cursor: pointer;
-    border-radius: 20px;
-    font-size: 16px;
-    text-decoration: none;
-    display: inline-block;
-    margin: 5px;
-    transition: background-color 0.3s ease-in-out;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-.btn-access-guest:hover{
-    background-color: #B22222; /* Darkened primary color */
-    color: #FFFFFF;
-    border: 1.25px solid #FFFFFF;
-}
-
-.btn-access-admin:hover {
-    background-color: #FFFFFF; /* Darkened primary color */
-    color: #8B0000;
-    border: 1.25px solid #b22222;
+.form-container {
+    width: 100%; /* Ensures both forms take up the same width */
+    max-width: 100%; /* Prevents overflow beyond container */
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+    min-height: 200px; /* Set a minimum height for consistency */
 }
 
 .back-button-container {
@@ -278,7 +303,6 @@ button:hover {
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
-    
 }
 
 .logo {
