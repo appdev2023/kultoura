@@ -1109,6 +1109,23 @@ nav{
     .wrapper .carousel { 
         grid-auto-columns: 100%; 
   
-    } 
+    }
+
+        .wrapper i { 
+        height: 50px; 
+        width: 50px; 
+        background: #B22222; 
+        text-align: center; 
+        line-height: 50px; 
+        border-radius: 50%; 
+        cursor: pointer; 
+        position: absolute; 
+        top: 50%; 
+        font-size: 1.25 rem; 
+        transform: translateY(-30%); 
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23); 
+        margin-left: -28px;
+       
+    }  
 }
 
