@@ -1,4 +1,3 @@
-/* General styles */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -616,25 +615,25 @@ nav{
   
 } 
   
-
+/*Widescreen monitor*/
 @media screen and (min-width: 1920px) {
     .welcome-body, .login-body, .access-body {
-        background-size: cover; /* Ensure the background image covers the screen */
+        background-size: cover; 
     }
     
     .welcome-container, .login-container, .access-container {
-        max-width: 1600px; /* Adjust to a wider container size */
-        padding: 100px; /* Increase padding for better spacing on wider screens */
+        max-width: 1600px; 
+        padding: 100px; 
     }
 
     .btn-red, .btn-white {
-        padding: 15px 60px; /* Increase button padding for better proportion */
+        padding: 15px 60px; 
     }
 
     .input-container .toggle-password {
         position: relative;
-        right: -120px; /* Adjust this value to move the icon further right */
-        top: 50%; /* Adjust vertical positioning if needed */
+        right: -120px; 
+        top: 50%; 
         transform: translateY(-100%);
         cursor: pointer;
         color: #b22222;
@@ -649,7 +648,7 @@ nav{
 }
 
 
-/* Responsive styles */
+/*Laptop*/
 @media (max-width: 992px) {
     nav .navbar{
         max-width: 100%;
@@ -672,6 +671,7 @@ nav{
     } 
 }
 
+/*Tablet*/
 @media (max-width:800px){
 
     .navbar .bx-menu{
@@ -778,6 +778,7 @@ nav{
     }
 }
 
+/*Phone*/
 @media screen and (max-width: 576px) {
     .login-container {
         padding: 15px;
