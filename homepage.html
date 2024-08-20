@@ -71,16 +71,31 @@
       </video>
     </div>
     <script>
-        var video = document.querySelector("#videoElement");
-    
+         var video = document.querySelector("#videoElement");
+
     if (navigator.mediaDevices.getUserMedia) {
-      navigator.mediaDevices.getUserMedia({ video: true })
-        .then(function (stream) {
-          video.srcObject = stream;
-        })
-        .catch(function (err0r) {
-          console.log("Something went wrong!");
-        });
+        // Get a list of media devices
+        navigator.mediaDevices.enumerateDevices()
+            .then(function (devices) {
+                // Find the rear camera if available
+                const rearCamera = devices.find(device => device.kind === 'videoinput' && device.label.toLowerCase().includes('back'));
+
+                // Set up constraints to use the rear camera if available
+                const constraints = {
+                    video: {
+                        facingMode: rearCamera ? { exact: rearCamera.deviceId } : 'environment'
+                    }
+                };
+
+                // Request media stream with the specified constraints
+                return navigator.mediaDevices.getUserMedia(constraints);
+            })
+            .then(function (stream) {
+                video.srcObject = stream;
+            })
+            .catch(function (error) {
+                console.log("Something went wrong!", error);
+            });
     }
     
     </script>
