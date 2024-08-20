@@ -65,14 +65,24 @@
     </nav>
 
     <!-- Start Scanning Button -->
-    <div class="start-scanning-container">
-      <label for="picture">Take a picture using back facing camera:</label>
-      <input type="file" id="picture" name="picture" accept="image/*" capture="environment" />
-      <button class="btn-red" id="start-scanning">Start Scanning</button>
-  </div>  
-
-  
-
-    <script src="scripts.js"></script>
+    <div id="container">
+      <video autoplay="true" id="videoElement">
+      
+      </video>
+    </div>
+    <script>
+        var video = document.querySelector("#videoElement");
+    
+    if (navigator.mediaDevices.getUserMedia) {
+      navigator.mediaDevices.getUserMedia({ video: true })
+        .then(function (stream) {
+          video.srcObject = stream;
+        })
+        .catch(function (err0r) {
+          console.log("Something went wrong!");
+        });
+    }
+    
+    </script>
   </body>
 </html>
