@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #1C1C1C; /* Dark background */
+    background-color: #272626; /* Dark background */
     color: #FFFFFF;
     display: flex;
     justify-content: center;
@@ -16,7 +16,7 @@ body {
 
 h1, h2 {
     font-family: 'Jomolhari', serif;
-    color: #b22222;
+    color: #073066;
     margin-bottom: 10px;
 }
 
@@ -30,9 +30,27 @@ p {
 
 /* Welcome Page Styles */
 .welcome-body {
-    background: url('img/bulul.png') no-repeat center center fixed, #1C1C1C; /* Image overlaid on a dark background */
-    background-size: 300px; /* Adjust as needed */
+    background: url('img/bulul.png') no-repeat center center fixed, #272626; /* Image overlaid on a dark background */
+    background-size: cover; /* Ensure the image covers the entire container */
     box-shadow: none; /* Remove the box-shadow */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #272626(0, 0, 0, 0.8); /* Dark overlay for better visibility */
+    opacity: 0;
+    animation: backgroundAnimation 5s forwards; /* Adjust duration as needed */
+}
+
+@keyframes backgroundAnimation {
+    from {
+        opacity: 0;
+        background-size: 300px;
+    }
+    to {
+        opacity: 1;
+        background-size: 310px;
+    }
 }
 
 .welcome-container {
@@ -41,6 +59,7 @@ p {
     padding: 50px;
     border-radius: 20px;
     box-shadow: none;
+    margin-bottom: 50px;
 }
 
 .welcome-container h1 {
@@ -52,7 +71,7 @@ p {
 /* Login Page Styles */
 .login-body {
     background: url('img/bulul-low-op.png') no-repeat center center fixed;
-    background-color: #1C1C1C;
+    background-color: #272626;
     background-size: 300px; /* Adjust as needed */
     box-shadow: none; /* Remove the box-shadow */
 }
@@ -100,7 +119,7 @@ p {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
-    border: 1px solid #b22222;
+    border: 1px solid #073066;
     border-radius: 5px;
     background-color: rgba(28, 28, 28, 0.8);
     color: #FFFFFF;
@@ -114,7 +133,7 @@ p {
 
 h1, .header1 {
     font-family: 'Jomolhari', serif;
-    color: #b22222;
+    color: #073066;
     margin-bottom: 20px;
 }
 
@@ -139,11 +158,11 @@ form {
     padding-top: 10px; /* Adjust vertical padding to center text */
     padding-bottom: 10px; /* Adjust vertical padding to center text */
     width: 100%; /* Ensures the input field spans the container */
-    border: 1px solid #b22222;
+    border: 1px solid #073066;
     border-radius: 5px;
     text-indent: 30px; /* Creates a tabbed effect for the input text */
     background-color: rgba(0, 0, 0, 0.2);
-    color: #B22222;
+    color: #073066;
     outline: none;
     font-size: 16px;
 }
@@ -154,7 +173,7 @@ form {
     left: 195px;
     transform: translateY(-15%);
     cursor: pointer;
-    color: #b22222;
+    color: #073066;
 }  
 
 .input-container i {
@@ -162,7 +181,7 @@ form {
     left: 10px;
     top: 50%;
     transform: translateY(-10%);
-    color: #b22222; /* Adjust icon color as needed */
+    color: #073066; /* Adjust icon color as needed */
 }
 
 .input-container .icon-left {
@@ -174,7 +193,7 @@ input[type="text"],
 input[type="password"] {
     padding: 12px;
     margin-bottom: 10px;
-    border: 3px solid #b22222;
+    border: 3px solid #073066;
     border-radius: 10px;
     outline: none;
     font-size: 16px;
@@ -182,7 +201,7 @@ input[type="password"] {
 }
 
 button {
-    background-color: #b22222;
+    background-color: #073066;
     color: #FFFFFF;
     border: none;
     padding: 12px 20px;
@@ -195,14 +214,14 @@ button {
 }
 
 button:hover {
-    background-color: #8B0000;
+    background-color: #073066;
 }
 
 /* Red button styles */
 .btn-red {
-    background-color: #b22222;
+    background-color: #073066;
     color: #FFFFFF;
-    border: 1.25px solid #b22222;
+    border: 1.25px solid #073066;
     padding: 12px 50px;
     cursor: pointer;
     border-radius: 20px;
@@ -215,15 +234,15 @@ button:hover {
 
 .btn-red:hover {
     background-color: #FFFFFF; /* Darkened primary color */
-    color: #8B0000;
-    border: 1.25px solid #b22222;
+    color: #073066;
+    border: 1.25px solid #073066;
 }
 
 /* White button styles */
 .btn-white {
     background-color:#FFFFFF;
-    color: #b22222;
-    border: 1.25px solid #b22222;
+    color: #073066;
+    border: 1.25px solid #073066;
     padding: 12px 50px;
     cursor: pointer;
     border-radius: 20px;
@@ -235,14 +254,14 @@ button:hover {
 }
 
 .btn-white:hover {
-    background-color: #B22222; /* Darkened primary color */
+    background-color: #073066; /* Darkened primary color */
     color: #FFFFFF;
     border: 1.25px solid #FFFFFF;
 }
 
 .access-body {
     font-family: 'Inter', sans-serif;
-    background: url('img/bulul-low-op.png') no-repeat center center fixed, #1C1C1C; /* Image overlaid on a dark background */
+    background: url('img/bulul-low-op.png') no-repeat center center fixed, #272626; /* Image overlaid on a dark background */
     background-size: 300px; /* Adjust as needed */
     display: flex;
     justify-content: center;
@@ -273,7 +292,7 @@ button:hover {
 .custom-radio input[type="radio"] + .custom-radio-span {
     width: 20px;
     height: 20px;
-    border: 2px solid #b22222;
+    border: 2px solid #073066;
     border-radius: 50%;
     display: inline-block;
     position: relative;
@@ -284,7 +303,7 @@ button:hover {
     content: '';
     width: 10px;
     height: 10px;
-    background-color: #b22222;
+    background-color: #073066;
     border-radius: 50%;
     position: absolute;
     top: 50%;
@@ -307,15 +326,15 @@ button:hover {
 
 .logo-container {
     position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 20px;
+    left: 10px;
 }
 
 .logo {
-    max-width: 180px;
+    width: 300px; 
     height: auto;
-}
+    margin-left: 50px;
+  }
 
 /* Navbar styles */
 nav{
@@ -349,6 +368,7 @@ nav{
 
   .navbar .logo img{
     margin-top: 10px;
+    width: 50%;
   }
   nav .navbar .nav-links{
     line-height: 70px;
@@ -407,7 +427,7 @@ nav{
   }
 
   .navbar .nav-links ul.links li a:hover {
-    color: #B22222; /* Color on hover */
+    color: #073066; /* Color on hover */
     font-weight: 550;
   }
 
@@ -502,118 +522,55 @@ nav{
     display: none;
   }
 
-  /*Most Popular slideshow*/
-  .wrapper { 
-    max-width: 1090px; 
-    width: 100%; 
-    position: relative; 
-    margin: auto;
-} 
-  
-.wrapper i { 
-    height: 50px; 
-    width: 50px; 
-    background: #B22222; 
-    text-align: center; 
-    line-height: 50px; 
-    border-radius: 50%; 
-    cursor: pointer; 
-    position: absolute; 
-    top: 50%; 
-    font-size: 1.25 rem; 
-    transform: translateY(-30%); 
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23); 
-    margin-left: -28px;
-  
-} 
-  
-.wrapper i:first-child { 
-    left: -22px; 
-  
-} 
-  
-.wrapper i:last-child { 
-    right: -22px; 
-  
-} 
-  
-.wrapper .carousel { 
-    display: grid; 
-    grid-auto-flow: column; 
-    grid-auto-columns: calc((100% / 3) - 12px); 
-    gap: 16px; 
-    overflow-x: auto; 
-    scroll-snap-type: x mandatory; 
-    scroll-behavior: smooth; 
-    scrollbar-width: 0; 
-} 
-  
-.carousel::-webkit-scrollbar { 
-    display: none; 
-} 
-  
-.carousel :where(.card, .img) { 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-} 
-  
-.carousel.dragging { 
-    scroll-snap-type: none; 
-    scroll-behavior: auto; 
-} 
-  
-.carousel.no-transition { 
-    scroll-behavior: auto; 
-} 
-  
-.carousel.dragging .card { 
-    cursor: grab; 
-    user-select: none; 
-} 
-  
-.carousel .card { 
-    scroll-snap-align: start; 
-    height: 340px; 
-    list-style: none; 
-    background: #fff; 
-    border-radius: 8px; 
-    display: flex; 
-    cursor: pointer; 
-    width: 98%; 
-    padding-bottom: 15px; 
-    align-items: center; 
-    justify-content: center; 
-    flex-direction: column; 
-} 
-  
-.card .img { 
-    background: #B22222; 
-    width: 145px; 
-    height: 145px; 
-    border-radius: 50%; 
-  
-} 
-  
-.card .img img { 
-    width: 140px; 
-    height: 140px; 
-    object-fit: cover; 
-    border-radius: 50%; 
-    border: 4px solid #fff; 
-} 
-  
-.card h2 { 
-    font-weight: 500; 
-    font-size: 1.56rem; 
-    margin: 30px 0 5px; 
-} 
-  
-.card span { 
-    color: #6a6d78; 
-    font-size: 1.31rem; 
-  
-} 
+  .start-scanning-container {
+    position: fixed; /* Fixed positioning to stay in place */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust position to be exactly center */
+    display: flex;
+    flex-direction: column; /* Stack image and button vertically */
+    align-items: center;
+    z-index: 1000; /* Ensure it's above other elements */
+    opacity: 0; /* Start as invisible */
+    animation: fadeIn 2s forwards; /* Apply fade-in animation */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+  .btn-icon {
+    width: 300px; 
+    height: 300px; 
+    margin-bottom: 10px;
+}
+
+/*Camera style*/
+.start-scanning-container {
+  text-align: center;
+  margin-top: 50px;
+}
+.btn-icon {
+  display: none;
+}
+.btn-red {
+  padding: 10px 20px;
+  font-size: 18px;
+  color: white;
+  background-color: red;
+  border: none;
+  cursor: pointer;
+}
+#reader {
+  width: 300px;
+  margin: auto;
+  display: none;
+}
   
 /*Widescreen monitor*/
 @media screen and (min-width: 1920px) {
@@ -628,6 +585,17 @@ nav{
 
     .btn-red, .btn-white {
         padding: 15px 60px; 
+        background-color: #073066;
+        color: #FFFFFF;
+        border: 1.25px solid #073066;
+        padding: 12px 50px;
+        cursor: pointer;
+        border-radius: 20px;
+        font-size: 16px;
+        text-decoration: none;
+        display: inline-block;
+        margin: 5px;
+        transition: background-color 0.3s ease-in-out;
     }
 
     .input-container .toggle-password {
@@ -636,7 +604,7 @@ nav{
         top: 50%; 
         transform: translateY(-100%);
         cursor: pointer;
-        color: #b22222;
+        color: #073066;
     }
 
     .nav {
@@ -645,13 +613,28 @@ nav{
       .nav .search-box {
         right: 150px;
       }
+
+      nav .navbar{
+        padding: 0 25px;
+      }
+    
+      nav .navbar .logo a{
+        size: 30px;
+      }
+
+      .img {
+        size: 30px;
+      }
+
+      .logo {
+        margin-left: 50px;
+      }
 }
 
 
 /*Laptop*/
 @media (max-width: 992px) {
     nav .navbar{
-        max-width: 100%;
         padding: 0 25px;
       }
     
@@ -692,19 +675,20 @@ nav{
       z-index: 1000;
     }
 
-    .navbar .nav-links .sidebar-logo{
+    .navbar .nav-links{
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
+
     .sidebar-logo .logo-name{
       font-size: 25px;
-      color: #B22222;
+      color: #073066;
     }
       .sidebar-logo  i,
       .navbar .bx-menu{
         font-size: 25px;
-        color: #B22222;
+        color: #073066;
       }
     nav .navbar .links{
       display: block;
@@ -792,7 +776,7 @@ nav{
     
     body {
         font-family: 'Inter', sans-serif;
-        background-color: #1C1C1C; /* Dark background */
+        background-color: #272626; /* Dark background */
         color: #FFFFFF;
         display: flex;
         justify-content: center;
@@ -802,7 +786,7 @@ nav{
     
     h1 {
         font-family: 'Jomolhari', serif;
-        color: #b22222;
+        color: #073066;
         margin-bottom: 10px;
     }
     
@@ -815,6 +799,11 @@ nav{
         background: url('img/bulul.png') no-repeat center center fixed, #1C1C1C; /* Image overlaid on a dark background */
         background-size: 300px; /* Adjust as needed */
         box-shadow: none; /* Remove the box-shadow */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #161616;
     }
     
     .welcome-container {
@@ -830,6 +819,16 @@ nav{
         font-size: x-large;
         font-weight: lighter;
     }
+
+    /**/
+    .banner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 30px; /* Adjust for spacing between banner and button */
+    }
+    /**/
     
     /* Login Page Styles */
     .login-body {
@@ -882,7 +881,7 @@ nav{
         width: 100%;
         padding: 10px;
         margin-top: 5px;
-        border: 1px solid #b22222;
+        border: 1px solid #073066;
         border-radius: 5px;
         background-color: rgba(28, 28, 28, 0.8);
         color: #FFFFFF;
@@ -896,7 +895,7 @@ nav{
     
     h1, .header1 {
         font-family: 'Jomolhari', serif;
-        color: #b22222;
+        color: #073066;
         margin-bottom: 20px;
     }
     
@@ -917,11 +916,11 @@ nav{
         padding-top: 10px; /* Adjust vertical padding to center text */
         padding-bottom: 10px; /* Adjust vertical padding to center text */
         width: 100%; /* Ensures the input field spans the container */
-        border: 1px solid #b22222;
+        border: 1px solid #073066;
         border-radius: 5px;
         text-indent: 30px; /* Creates a tabbed effect for the input text */
         background-color: rgba(0, 0, 0, 0.2);
-        color: #B22222;
+        color: #073066;
         outline: none;
         font-size: 16px;
     }
@@ -932,7 +931,7 @@ nav{
         left: 195px;
         transform: translateY(-15%);
         cursor: pointer;
-        color: #b22222;
+        color: #073066;
     }  
     
     .input-container i {
@@ -940,7 +939,7 @@ nav{
         left: 10px;
         top: 50%;
         transform: translateY(-10%);
-        color: #b22222; /* Adjust icon color as needed */
+        color: #073066; /* Adjust icon color as needed */
     }
     
     .input-container .icon-left {
@@ -952,7 +951,7 @@ nav{
     input[type="password"] {
         padding: 12px;
         margin-bottom: 10px;
-        border: 3px solid #b22222;
+        border: 3px solid #073066;
         border-radius: 10px;
         outline: none;
         font-size: 16px;
@@ -960,7 +959,7 @@ nav{
     }
     
     button {
-        background-color: #b22222;
+        background-color: #073066;
         color: #FFFFFF;
         border: none;
         padding: 12px 20px;
@@ -973,14 +972,14 @@ nav{
     }
     
     button:hover {
-        background-color: #8B0000;
+        background-color: #073066;
     }
     
     /* Red button styles */
     .btn-red {
-        background-color: #b22222;
+        background-color: #073066;
         color: #FFFFFF;
-        border: 1.25px solid #b22222;
+        border: 1.25px solid #073066;
         padding: 12px 50px;
         cursor: pointer;
         border-radius: 20px;
@@ -993,15 +992,15 @@ nav{
     
     .btn-red:hover {
         background-color: #FFFFFF; /* Darkened primary color */
-        color: #8B0000;
-        border: 1.25px solid #b22222;
+        color: #073066;
+        border: 1.25px solid #073066;
     }
     
     /* White button styles */
     .btn-white {
         background-color:#FFFFFF;
-        color: #b22222;
-        border: 1.25px solid #b22222;
+        color: #073066;
+        border: 1.25px solid #073066;
         padding: 12px 50px;
         cursor: pointer;
         border-radius: 20px;
@@ -1013,7 +1012,7 @@ nav{
     }
     
     .btn-white:hover {
-        background-color: #B22222; /* Darkened primary color */
+        background-color: #073066; /* Darkened primary color */
         color: #FFFFFF;
         border: 1.25px solid #FFFFFF;
     }
@@ -1051,7 +1050,7 @@ nav{
     .custom-radio input[type="radio"] + .custom-radio-span {
         width: 20px;
         height: 20px;
-        border: 2px solid #b22222;
+        border: 2px solid #073066;
         border-radius: 50%;
         display: inline-block;
         position: relative;
@@ -1062,7 +1061,7 @@ nav{
         content: '';
         width: 10px;
         height: 10px;
-        background-color: #b22222;
+        background-color: #073066;
         border-radius: 50%;
         position: absolute;
         top: 50%;
@@ -1094,39 +1093,5 @@ nav{
         max-width: 180px;
         height: auto;
     }
-
-    /*Navbar Style*/
-    nav .navbar .nav-links{
-        max-width: 100%;
-    }
-
-    /*Most Popular slideshow*/
-    .wrapper { 
-        max-width: 300px; 
-        width: 100%; 
-        position: relative; 
-    } 
-
-    .wrapper .carousel { 
-        grid-auto-columns: 100%; 
-  
-    }
-
-        .wrapper i { 
-        height: 50px; 
-        width: 50px; 
-        background: #B22222; 
-        text-align: center; 
-        line-height: 50px; 
-        border-radius: 50%; 
-        cursor: pointer; 
-        position: absolute; 
-        top: 50%; 
-        font-size: 1.25 rem; 
-        transform: translateY(-10%); 
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23); 
-        margin-left: -28px;
-       
-    }  
 }
 
