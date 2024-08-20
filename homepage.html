@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" href="img/favicon.png" type="image/x-icon" />
     <link href="img/favicon.png" rel="icon" />
-    <script src="https://unpkg.com/html5-qrcode/minified/html5-qrcode.min.js"></script>
+    <script type="text/javascript" src="instascan.min.js"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -65,39 +65,21 @@
     </nav>
 
     <!-- Start Scanning Button -->
-    <div id="container">
-      <video autoplay="true" id="videoElement">
-      
-      </video>
-    </div>
-    <script>
-         var video = document.querySelector("#videoElement");
-
-    if (navigator.mediaDevices.getUserMedia) {
-        // Get a list of media devices
-        navigator.mediaDevices.enumerateDevices()
-            .then(function (devices) {
-                // Find the rear camera if available
-                const rearCamera = devices.find(device => device.kind === 'videoinput' && device.label.toLowerCase().includes('back'));
-
-                // Set up constraints to use the rear camera if available
-                const constraints = {
-                    video: {
-                        facingMode: rearCamera ? { exact: rearCamera.deviceId } : 'environment'
-                    }
-                };
-
-                // Request media stream with the specified constraints
-                return navigator.mediaDevices.getUserMedia(constraints);
-            })
-            .then(function (stream) {
-                video.srcObject = stream;
-            })
-            .catch(function (error) {
-                console.log("Something went wrong!", error);
-            });
-    }
-    
+    <video id="preview"></video>
+    <script type="text/javascript">
+      let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
+      scanner.addListener('scan', function (content) {
+        console.log(content);
+      });
+      Instascan.Camera.getCameras().then(function (cameras) {
+        if (cameras.length > 0) {
+          scanner.start(cameras[0]);
+        } else {
+          console.error('No cameras found.');
+        }
+      }).catch(function (e) {
+        console.error(e);
+      });
     </script>
   </body>
 </html>
