@@ -170,5 +170,37 @@ document.addEventListener('DOMContentLoaded', function () {
                 -firstCardWidth : firstCardWidth; 
         }); 
     }); 
+
+    const startScanningButton = document.getElementById('start-scanning');
+    const reader = document.getElementById('reader');
+
+    startScanningButton.addEventListener('click', () => {
+        reader.style.display = 'block';
+        startScanningButton.style.display = 'none';
+
+        const html5QrCode = new html5QrCode("reader");
+        html5QrCode.start(
+            { facingMode: "environment" }, // Use rear camera
+            {
+                fps: 10,    // frames per second
+                qrbox: 250  // scanning box size
+            },
+            (decodedText, decodedResult) => {
+                // Handle the decoded QR code here
+                console.log(`QR Code detected: ${decodedText}`);
+                alert(`QR Code detected: ${decodedText}`);
+                html5QrCode.stop();
+                reader.style.display = 'none';
+                startScanningButton.style.display = 'block';
+            },
+            (errorMessage) => {
+                // Handle errors here
+                console.warn(`QR Code no match: ${errorMessage}`);
+            })
+            .catch((err) => {
+                // Handle exceptions here
+                console.error(`Unable to start scanning: ${err}`);
+            });
+    });
     
 });
