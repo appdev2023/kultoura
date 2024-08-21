@@ -557,7 +557,7 @@ main {
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 600px;
+  max-width: 400px;
   padding: 20px;
   background-color: #fff;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -567,9 +567,10 @@ main {
 
 #reader {
   width: 100%;
-    max-width: 400px;
+    max-width: 350px;
     height: auto;
     margin-bottom: 20px;
+    align-items: center;
 }
 
 #result {
@@ -1073,6 +1074,8 @@ main {
         display: inline-block;
         margin: 5px;
         transition: background-color 0.3s ease-in-out;
+        position: relative;
+        z-index: 10;
     }
     
     .btn-red:hover {
@@ -1094,6 +1097,8 @@ main {
         display: inline-block;
         margin: 5px;
         transition: background-color 0.3s ease-in-out;
+        position: relative;
+        z-index: 10; /* Ensures the button is clickable */
     }
     
     .btn-white:hover {
