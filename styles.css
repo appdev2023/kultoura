@@ -551,90 +551,32 @@ nav{
 }
 
 /*Camera style*/
-.start-scanning-container {
-  text-align: center;
-  margin-top: 50px;
-}
-.btn-icon {
-  display: none;
-}
-.btn-red {
-  padding: 10px 20px;
-  font-size: 18px;
-  color: white;
-  background-color: red;
-  border: none;
-  cursor: pointer;
-}
-#reader {
-  width: 300px;
-  margin: auto;
-  display: none;
-}
-
-#container {
-	margin: 0px auto;
-	width: 500px;
-	height: 375px;
-	border: 10px #333 solid;
-}
-#videoElement {
-	width: 500px;
-	height: 375px;
-	background-color: #666;
-}
-
-/*Temp*/
-.screenshot-image {
-  width: 150px;
-  height: 90px;
-  border-radius: 4px;
-  border: 2px solid whitesmoke;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
-  position: absolute;
-  bottom: 5px;
-  left: 10px;
-  background: white;
-}
-
-.display-cover {
+main {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 70%;
-  margin: 5% auto;
-  position: relative;
-}
-
-video {
   width: 100%;
-  background: rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin: 20px auto;
 }
 
-.video-options {
-  position: absolute;
-  left: 20px;
-  top: 30px;
+#reader {
+  width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin-bottom: 20px;
 }
 
-.controls {
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  display: flex;
-}
-
-.controls > button {
-  width: 45px;
-  height: 45px;
+#result {
   text-align: center;
-  border-radius: 100%;
-  margin: 0 6px;
-  background: transparent;
-}
-
-.controls > button:hover svg {
-  color: white !important;
+    font-size: 1.25rem;
+    color: #333;
+    word-wrap: break-word;
 }
 
 @media (min-width: 300px) and (max-width: 400px) {
@@ -939,6 +881,29 @@ video {
         font-size: x-large;
         font-weight: lighter;
     }
+
+    /*Camera*/
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 20px;
+  }
+  
+  #reader {
+    padding: auto;
+    width: 100%;
+    max-width: 576px; /* Set to match the phone's resolution */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+#result {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
 
     /**/
     .banner {
